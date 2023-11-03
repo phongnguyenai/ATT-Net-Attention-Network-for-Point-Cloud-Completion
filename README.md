@@ -25,7 +25,7 @@ To make predictions, follow these steps:
 3. Run the following command to perform predictions:
 
     ```bash
-    python test.py
+    python predict.py
     ```
 
 ## Training
