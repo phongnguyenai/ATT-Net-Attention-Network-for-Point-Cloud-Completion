@@ -3,7 +3,7 @@ import os
 import random
 import numpy as np
 import torch
-from torch_geometric.data import DataLoader
+from torch_geometric.loader import DataLoader
 from model import ATT_Net
 
 import sys
