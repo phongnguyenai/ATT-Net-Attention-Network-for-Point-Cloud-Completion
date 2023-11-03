@@ -1,39 +1,49 @@
-# ATT-Net-Attention-Network-for-Point-Cloud-Completion
+# ATT-Net: Attention Network for Point Cloud Completion
 
-1. Installation
+## Installation
 
-- CUDA 11.8
-- torch==2.0.1, torch_geometric==2.3.1. Install at https://pytorch.org/
-- pytorch3d==0.7.4. Install at https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md
-- pointnet2_ops. Install locally as follows:
+Before you begin, ensure you have the following prerequisites installed:
 
-```
-cd Pointnet2_Pytorch
-python setup.py install
-```
+- **CUDA**: Version 11.8
+- **PyTorch**: Version 2.0.1 and **torch_geometric**: Version 2.3.1. You can install them from [pytorch.org](https://pytorch.org/).
+- **pytorch3d**: Version 0.7.4. Install it by following the instructions [here](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
+- **pointnet2_ops**: To install locally, follow these steps:
 
-2. Prediction
+    ```bash
+    cd Pointnet2_Pytorch
+    python setup.py install
+    ```
 
-Download test dataset at: https://uowmailedu-my.sharepoint.com/:u:/r/personal/ttpn997_uowmail_edu_au/Documents/dataset/ATT-Net/test.tar.gz?csf=1&web=1&e=Sn6rpK
+## Prediction
 
-Extract the file and copy it to the folder ./PCN/test/
+To make predictions, follow these steps:
 
-Run this command:
+1. Download the test dataset from [this link](https://uowmailedu-my.sharepoint.com/:u:/r/personal/ttpn997_uowmail_edu_au/Documents/dataset/ATT-Net/test.tar.gz?csf=1&web=1&e=Sn6rpK).
 
-```
-python test.py
-```
+2. Extract the downloaded file and copy its contents to the folder `./PCN/test/`.
 
-3. Training
+3. Run the following command to perform predictions:
 
-Download val dataset at: https://uowmailedu-my.sharepoint.com/:u:/g/personal/ttpn997_uowmail_edu_au/EbxYcKtV_ahOpaAvq-A-9ZwBOqabr_5nddl7mWwhWJJ_Rw?e=FSiE7A
+    ```bash
+    python test.py
+    ```
 
-Download train dataset at: https://uowmailedu-my.sharepoint.com/:u:/g/personal/ttpn997_uowmail_edu_au/EeffEPj7HgpGhkGQVshxqWwBRz6bGUjLmirj79GgFflyCA?e=HhemQE
+## Training
 
-Extract val and train files. Then copy them to the folder ./PCN/train/ and ./PCN/val
+To train the model, you'll need to follow these steps:
 
-Run this command:
+1. Download the validation dataset from [this link](https://uowmailedu-my.sharepoint.com/:u:/g/personal/ttpn997_uowmail_edu_au/EbxYcKtV_ahOpaAvq-A-9ZwBOqabr_5nddl7mWwhWJJ_Rw?e=FSiE7A).
 
-```
-python train.py
-```
+2. Download the training dataset from [this link](https://uowmailedu-my.sharepoint.com/:u:/g/personal/ttpn997_uowmail_edu_au/EeffEPj7HgpGhkGQVshxqWwBRz6bGUjLmirj79GgFflyCA?e=HhemQE).
+
+3. After downloading, extract the validation and training dataset files.
+
+4. Copy the extracted files to the folders `./PCN/train/` and `./PCN/val`.
+
+5. To initiate the training process, execute the following command:
+
+    ```bash
+    python train.py
+    ```
+
+This organized format should help users better understand and follow the installation, prediction, and training steps for your project.
