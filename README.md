@@ -28,7 +28,7 @@ python test.py
 
 Download val dataset at: https://uowmailedu-my.sharepoint.com/:u:/g/personal/ttpn997_uowmail_edu_au/EbxYcKtV_ahOpaAvq-A-9ZwBOqabr_5nddl7mWwhWJJ_Rw?e=FSiE7A
 
-Download train dataset at: 
+Download train dataset at: https://uowmailedu-my.sharepoint.com/:u:/g/personal/ttpn997_uowmail_edu_au/EeffEPj7HgpGhkGQVshxqWwBRz6bGUjLmirj79GgFflyCA?e=HhemQE
 
 Extract val and train files. Then copy them to the folder ./PCN/train/ and ./PCN/val
 
