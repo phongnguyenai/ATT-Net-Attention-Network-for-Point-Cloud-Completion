@@ -2,17 +2,11 @@
 
 ## Installation
 
-Before you begin, ensure you have the following prerequisites installed:
+**CUDA**: Version 11.8
 
-- **CUDA**: Version 11.8
-- **PyTorch**: Version 2.0.1 and **torch_geometric**: Version 2.3.1. You can install them from [pytorch.org](https://pytorch.org/).
-- **pytorch3d**: Version 0.7.4. Install it by following the instructions [here](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
-- **pointnet2_ops**: To install locally, follow these steps:
-
-    ```bash
-    cd Pointnet2_Pytorch
-    python setup.py install
-    ```
+```
+sh ./env.sh
+```
 
 ## Prediction
 
