@@ -2,7 +2,7 @@
 
 ## Installation
 
-**CUDA**: Version 11.8
+We provide instructions for creating a conda environment for training and predicting. (Note that we use CUDA Version 11.8).
 
 ```
 sh ./env.sh
