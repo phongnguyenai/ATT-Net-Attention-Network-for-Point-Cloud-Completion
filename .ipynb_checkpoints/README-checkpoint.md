@@ -14,7 +14,7 @@ To make predictions, follow these steps:
 
 1. Download the test dataset from [this link](https://uowmailedu-my.sharepoint.com/:u:/r/personal/ttpn997_uowmail_edu_au/Documents/dataset/ATT-Net/test.tar.gz?csf=1&web=1&e=Sn6rpK).
 
-2. Download the pretrained weight (**best.pt**) from [this link](https://uowmailedu-my.sharepoint.com/:u:/g/personal/ttpn997_uowmail_edu_au/EWcJcmV2ruNKsNfQiGLIMUgBvOL1s5fa6zA7rcIIrN33Ug?e=lcbOyE).
+2. Download the pretrained weight (**best.pt**) from [this link](https://uowmailedu-my.sharepoint.com/:u:/g/personal/ttpn997_uowmail_edu_au/EWcJcmV2ruNKsNfQiGLIMUgBvOL1s5fa6zA7rcIIrN33Ug?e=lcbOyE). Then put the pretrained weight in the folder `./weight/ATT-Net`.
 
 3. Extract the downloaded file and copy its contents to the folder `./PCN/test/`.
 
