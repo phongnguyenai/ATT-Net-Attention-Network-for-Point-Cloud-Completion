@@ -41,5 +41,3 @@ To train the model, you'll need to follow these steps:
     ```bash
     python train.py
     ```
-
-This organized format should help users better understand and follow the installation, prediction, and training steps for your project.
