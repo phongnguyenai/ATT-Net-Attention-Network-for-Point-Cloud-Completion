@@ -77,7 +77,7 @@ class Decoder(nn.Module):
 class ATT_Net(nn.Module):
     def __init__(self):
         super(ATT_Net, self).__init__()
-        self.encoder = Encoder(AttentionBlock, [2, 3, 4, 6, 3]).cuda()
+        self.encoder = Encoder(FeatureExtractor, [2, 3, 4, 6, 3]).cuda()
         self.decoder = Decoder(dim_feat=512, num_pc=256, num_p0=512,
                                radius=1, bounding=True, up_factors=[4,1,4]).cuda()
         
