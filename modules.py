@@ -949,7 +949,7 @@ class SPD(nn.Module):
 
         return pcd_child, K_curr
 
-class AttentionLayer(nn.Module):
+class FeatureExtractor(nn.Module):
     def __init__(self, in_planes, out_planes, share_planes=8, nsample=16):
         super().__init__()
         self.mid_planes = mid_planes = out_planes // 1
@@ -1036,7 +1036,7 @@ class AttentionBlock(nn.Module):
         super(AttentionBlock, self).__init__()
         self.linear1 = nn.Linear(in_planes, planes, bias=False)
         self.bn1 = nn.BatchNorm1d(planes)
-        self.transformer2 = AttentionLayer(planes, planes, share_planes, nsample)
+        self.transformer2 = FeatureExtractor(planes, planes, share_planes, nsample)
         self.bn2 = nn.BatchNorm1d(planes)
         self.linear3 = nn.Linear(planes, planes * self.expansion, bias=False)
         self.bn3 = nn.BatchNorm1d(planes * self.expansion)
