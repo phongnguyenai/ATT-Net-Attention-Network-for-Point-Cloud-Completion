@@ -10,14 +10,14 @@ class Encoder(nn.Module):
         self.in_planes, self.planes = c, [32, 64, 128, 256, 512]
         fpn_planes, fpnhead_planes, share_planes = 128, 64, 8
         stride, nsample = [1, 4, 4, 4, 4], [8, 16, 16, 16, 16]
-        self.enc1 = self.builder(block, self.planes[0], blocks[0], share_planes, stride=stride[0], nsample=nsample[0])  # N/1
-        self.enc2 = self.builder(block, self.planes[1], blocks[1], share_planes, stride=stride[1], nsample=nsample[1])  # N/4
-        self.enc3 = self.builder(block, self.planes[2], blocks[2], share_planes, stride=stride[2], nsample=nsample[2])  # N/16
-        self.enc4 = self.builder(block, self.planes[3], blocks[3], share_planes, stride=stride[3], nsample=nsample[3])  # N/64
-        self.enc5 = self.builder(block, self.planes[4], blocks[4], share_planes, stride=stride[4], nsample=nsample[4])  # N/256
+        self.enc1 = self.AttentionBlock(block, self.planes[0], blocks[0], share_planes, stride=stride[0], nsample=nsample[0])  # N/1
+        self.enc2 = self.AttentionBlock(block, self.planes[1], blocks[1], share_planes, stride=stride[1], nsample=nsample[1])  # N/4
+        self.enc3 = self.AttentionBlock(block, self.planes[2], blocks[2], share_planes, stride=stride[2], nsample=nsample[2])  # N/16
+        self.enc4 = self.AttentionBlock(block, self.planes[3], blocks[3], share_planes, stride=stride[3], nsample=nsample[3])  # N/64
+        self.enc5 = self.AttentionBlock(block, self.planes[4], blocks[4], share_planes, stride=stride[4], nsample=nsample[4])  # N/256
         self.linear = nn.Sequential(nn.Linear(self.planes[4], self.planes[4]), nn.BatchNorm1d(self.planes[4]), nn.ReLU(inplace=True), nn.Linear(self.planes[4], self.planes[4]))
 
-    def builder(self, block, planes, blocks, share_planes=8, stride=1, nsample=16):
+    def AttentionBlock(self, block, planes, blocks, share_planes=8, stride=1, nsample=16):
         layers = []
         layers.append(DownSampler(self.in_planes, planes * block.expansion, stride, nsample))
         self.in_planes = planes * block.expansion
