@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Author: Peng Xiang
+# @Author: Phong Nguyen
 
 import types
 import torch
