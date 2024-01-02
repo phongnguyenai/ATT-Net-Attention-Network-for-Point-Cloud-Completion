@@ -5,10 +5,7 @@ import numpy as np
 import torch
 from torch_geometric.loader import DataLoader
 from model import ATT_Net
-
 import sys
-sys.path.append("../../IEEE-Sensor-2023/code/")
-
 from datasets import PCNDataset
 from pytorch3d.loss.chamfer import chamfer_distance
 import argparse
@@ -102,27 +99,27 @@ seed_everything()
 # Train cofig
 train_config = Config()
 train_config.subset = "train"
-train_config.PARTIAL_POINTS_PATH = f"../../IEEE-Sensor-2023/code/PCN/{train_config.subset}/partial"
-train_config.COMPLETE_POINTS_PATH = f"../../IEEE-Sensor-2023/code/PCN/{train_config.subset}/complete"
-train_config.CATEGORY_FILE_PATH = "../../IEEE-Sensor-2023/code/PCN/PCN.json"
+train_config.PARTIAL_POINTS_PATH = f"PCN/{train_config.subset}/partial"
+train_config.COMPLETE_POINTS_PATH = f"PCN/{train_config.subset}/complete"
+train_config.CATEGORY_FILE_PATH = "PCN/PCN.json"
 train_config.N_POINTS = int(args.num_pred)
 train_config.CARS = False
 
 # Valid cofig
 val_config = Config()
 val_config.subset = "val"
-val_config.PARTIAL_POINTS_PATH = f"../../IEEE-Sensor-2023/code/PCN/{val_config.subset}/partial"
-val_config.COMPLETE_POINTS_PATH = f"../../IEEE-Sensor-2023/code/PCN/{val_config.subset}/complete"
-val_config.CATEGORY_FILE_PATH = "../../IEEE-Sensor-2023/code/PCN/PCN.json"
+val_config.PARTIAL_POINTS_PATH = f"PCN/{val_config.subset}/partial"
+val_config.COMPLETE_POINTS_PATH = f"PCN/{val_config.subset}/complete"
+val_config.CATEGORY_FILE_PATH = "PCN/PCN.json"
 val_config.N_POINTS = int(args.num_pred)
 val_config.CARS = False
 
 # Test cofig
 test_config = Config()
 test_config.subset = "test"
-test_config.PARTIAL_POINTS_PATH = f"../../IEEE-Sensor-2023/code/PCN/{test_config.subset}/partial"
-test_config.COMPLETE_POINTS_PATH = f"../../IEEE-Sensor-2023/code/PCN/{test_config.subset}/complete"
-test_config.CATEGORY_FILE_PATH = "../../IEEE-Sensor-2023/code/PCN/PCN.json"
+test_config.PARTIAL_POINTS_PATH = f"PCN/{test_config.subset}/partial"
+test_config.COMPLETE_POINTS_PATH = f"PCN/{test_config.subset}/complete"
+test_config.CATEGORY_FILE_PATH = "PCN/PCN.json"
 test_config.N_POINTS = int(args.num_pred)
 test_config.CARS = False
 
