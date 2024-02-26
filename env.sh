@@ -6,3 +6,5 @@ conda install -y -c bottler nvidiacub
 conda install pytorch3d -c pytorch3d
 cd Pointnet2_Pytorch
 python setup.py install
+cd lib/pointops
+python setup.py install
